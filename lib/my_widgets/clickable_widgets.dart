@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:screenat/second_screen.dart';
+import 'package:screenat/role_selection_page.dart';
 
 class CreatAcount extends StatelessWidget {
   const CreatAcount({Key? key}) : super(key: key);
@@ -11,14 +11,14 @@ class CreatAcount extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondScreen()),
+            MaterialPageRoute(builder: (context) => const SecondScreen()),
           );
         },
 
         child: const Text('Create an Acount',style: TextStyle(fontSize: 20),),
         style: ElevatedButton.styleFrom(
-           // primary: Colors.ragb(36,187,204,255),
-            fixedSize: const Size(300, 65),
+          primary: Color.fromARGB(255, 36, 187, 204),
+            fixedSize: const Size(370, 65),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15))),
 
@@ -33,7 +33,7 @@ class FlatLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(onPressed: (){}, child: Text("Login",style: TextStyle(fontSize: 17,color: Colors.cyan),));
+    return FlatButton(onPressed: (){}, child: const Text("Login",style: TextStyle(fontSize: 17,color:  Color.fromARGB(255, 36, 187, 204),),));
   }
 }
 class Continue extends StatelessWidget {
@@ -42,11 +42,12 @@ class Continue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return      ElevatedButton(
-      onPressed: () { print("nb");    },
+      onPressed: () {     },
 
       child: const Text('Continue',style: TextStyle(fontSize: 20),),
       style: ElevatedButton.styleFrom(
-        // primary: Colors.ragb(36,187,204,255),
+          primary: Color.fromARGB(255, 36, 187, 204),
+
           fixedSize: const Size(370, 65),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15))),
